@@ -20,14 +20,8 @@ int pageCount(int n, int p)
 {
   int pages = (n / 2) + 1;
   int targetPage = (p / 2) + 1;
-  if (pages - targetPage < targetPage - 1)
-  {
-    return pages - targetPage;
-  }
-  else
-  {
-    return targetPage - 1;
-  }
+
+  return pages - targetPage < targetPage - 1 ? pages - targetPage : targetPage - 1;
 }
 
 int main()
